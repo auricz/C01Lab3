@@ -62,7 +62,7 @@ function Dialog({open, initialNote, closeDialog, postNote: postNoteState, patchN
         }
         try {
             fetch("http://localhost:4000/patchNote/" + note._id, fetchParams)
-                .then(() => patchNoteState(note._id, note.title, note.content))
+                .then(res => res.ok ? patchNoteState(note._id, note.title, note.content) : alert("Failed to edit note."))
                 .catch(err => {
                     console.log(err);
                     alert("Failed to edit note.");

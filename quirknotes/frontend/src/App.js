@@ -45,7 +45,7 @@ function App() {
     }
     try {
       fetch("http://localhost:4000/deleteNote/" + entry._id, fetchParams)
-        .then(() => deleteNoteState(entry._id))
+        .then(res => res.ok ? deleteNoteState(entry._id) : alert("Failed to delete note."))
         .catch(err => {
           console.log(err);
           alert("Failed to delete that note.");
@@ -63,7 +63,7 @@ function App() {
     }
     try {
       fetch("http://localhost:4000/deleteAllNotes", fetchParams)
-        .then(deleteAllNotesState)
+        .then(res => res.ok ? deleteAllNotesState() : alert("Failed to delete all notes."))
         .catch(err => {
           console.log(err);
           alert("Failed to delete all notes.");
