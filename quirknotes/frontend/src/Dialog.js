@@ -65,12 +65,12 @@ function Dialog({open, initialNote, closeDialog, postNote: postNoteState, patchN
                 .then(() => patchNoteState(note._id, note.title, note.content))
                 .catch(err => {
                     console.log(err);
-                    alert(err);
+                    alert("Failed to edit note.");
                 });
         } catch (error) {
             setStatus("Error trying to post note");
             console.log("Fetch function failed:", error);
-            alert(error);
+            alert("Something went wrong with editing that note.");
         } 
     }
 

@@ -48,11 +48,11 @@ function App() {
         .then(() => deleteNoteState(entry._id))
         .catch(err => {
           console.log(err);
-          alert(err);
+          alert("Failed to delete that note.");
         })
     } catch (error) {
       console.log("Fetch function failed:", error);
-      alert(error);
+      alert("Something went wrong with deleting that note.");
     } 
   }
 
@@ -66,11 +66,11 @@ function App() {
         .then(deleteAllNotesState)
         .catch(err => {
           console.log(err);
-          alert(err);
+          alert("Failed to delete all notes.");
         })
     } catch (error) {
       console.log("Fetch function failed:", error);
-      alert(error);
+      alert("Something went wrong with deleting all notes.");
     } 
   }
 
