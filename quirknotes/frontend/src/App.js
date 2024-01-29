@@ -51,7 +51,8 @@ function App() {
           alert(err);
         })
     } catch (error) {
-      console.log("Fetch function failed:", error)
+      console.log("Fetch function failed:", error);
+      alert(error);
     } 
   }
 
@@ -68,7 +69,8 @@ function App() {
           alert(err);
         })
     } catch (error) {
-      console.log("Fetch function failed:", error)
+      console.log("Fetch function failed:", error);
+      alert(error);
     } 
   }
 

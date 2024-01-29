@@ -68,8 +68,9 @@ function Dialog({open, initialNote, closeDialog, postNote: postNoteState, patchN
                     alert(err);
                 });
         } catch (error) {
-            setStatus("Error trying to post note")
-            console.log("Fetch function failed:", error)
+            setStatus("Error trying to post note");
+            console.log("Fetch function failed:", error);
+            alert(error);
         } 
     }
 
